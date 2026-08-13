@@ -5,9 +5,9 @@ import {
 import { trash, create } from 'ionicons/icons';
 import { useState, useEffect } from 'react';
 
-const API_URL = 'http://10.190.156.90:5000/api/Products';
-const SETTINGS_URL = 'http://10.190.156.90:5000/api/Settings/logo';
-const AUTH_URL = 'http://10.190.156.90:5000/api/Auth/login';
+const API_URL = 'http://192.168.1.3:5000/api/Products';
+const SETTINGS_URL = 'http://192.168.1.3:5000/api/Settings/logo';
+const AUTH_URL = 'http://192.168.1.3:5000/api/Auth/login';
 
 interface Product {
   id: number;
@@ -222,7 +222,7 @@ const Admin: React.FC = () => {
                 <IonList>
                   {products.map(p => (
                     <IonItem key={p.id}>
-                      {p.imagenUrl && <IonThumbnail slot="start"><img src={`http://10.190.156.90:5000${p.imagenUrl}`} alt={p.nombreComercial} /></IonThumbnail>}
+                      {p.imagenUrl && <IonThumbnail slot="start"><img src={`http://192.168.1.3:5000${p.imagenUrl}`} alt={p.nombreComercial} /></IonThumbnail>}
                       <IonLabel>
                         <h2>{p.nombreComercial}</h2>
                         <p>{p.tipo}</p>

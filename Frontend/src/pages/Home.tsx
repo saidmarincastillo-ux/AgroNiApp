@@ -28,7 +28,7 @@ interface Product {
   proposito: string;
 }
 
-const API_URL = 'http://10.190.156.90:5000/api/Products';
+const API_URL = 'http://192.168.1.3:5000/api/Products';
 
 const Home: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
           <IonTitle>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <img 
-                src={`http://10.190.156.90:5000/images/logo.png?t=${new Date().getTime()}`} 
+                src={`http://192.168.1.3:5000/images/logo.png?t=${new Date().getTime()}`} 
                 alt="AgroNi" 
                 style={{ height: '32px', borderRadius: '8px', objectFit: 'contain' }}
                 onError={(e) => { e.currentTarget.style.display = 'none'; }} 
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
                   <div style={{ display: 'flex', gap: '15px' }}>
                     {p.imagenUrl ? (
                       <IonThumbnail style={{ width: '80px', height: '80px' }}>
-                        <img src={`http://10.190.156.90:5000${p.imagenUrl}`} alt={p.nombreComercial} />
+                        <img src={`http://192.168.1.3:5000${p.imagenUrl}`} alt={p.nombreComercial} />
                       </IonThumbnail>
                     ) : (
                       <div style={{ width: '80px', height: '80px', background: '#e0e0e0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px' }}>
