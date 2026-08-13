@@ -1,0 +1,22 @@
+# Node.js / Frontend React Ionic
+node_modules/
+dist/
+build/
+npm-debug.log*
+.env
+
+# C# / Backend .NET
+[Oo]bj/
+[Bb]in/
+.vs/
+*.user
+*.suo
+appsettings.Development.json
+
+# Archivos temporales de SQLite
+*.db-shm
+*.db-wal
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
